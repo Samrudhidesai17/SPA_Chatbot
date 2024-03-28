@@ -42,24 +42,25 @@ rl.question('Choose a tag (by number or name): ', (tagInput) => {
                 content: `Here is some data from the Excel file:\n${dataString}\n${userQuestion}`
             }];
 
-            // axios.post('https://api.openai.com/v1/chat/completions', {
-                model: "gpt-3.5-turbo-0613",
-                messages: messages,
-                max_tokens: 100
-            }, {
-                headers: {
-                    'Authorization': `Bearer ${apiKey}`,
-                    'Content-Type': 'application/json'
-                }
-            }).then(response => {
-                if (response.data.choices && response.data.choices.length > 0) {
-                    console.log(response.data.choices[0].message.content.trim());
-                } else {
-                    console.error('No response from the API');
-                }
-            }).catch(error => {
-                console.error('Error:', error.response ? error.response.data : error);
-            });
+            // axios.post('https://api.openai.com/v1/chat/completions', 
+            // {
+            //     model: "gpt-3.5-turbo-0613",
+            //     messages: messages,
+            //     max_tokens: 100
+            // }, {
+            //     headers: {
+            //         'Authorization': `Bearer ${apiKey}`,
+            //         'Content-Type': 'application/json'
+            //     }
+            // }).then(response => {
+            //     if (response.data.choices && response.data.choices.length > 0) {
+            //         console.log(response.data.choices[0].message.content.trim());
+            //     } else {
+            //         console.error('No response from the API');
+            //     }
+            // }).catch(error => {
+            //     console.error('Error:', error.response ? error.response.data : error);
+            // });
 
             rl.close();
         });
