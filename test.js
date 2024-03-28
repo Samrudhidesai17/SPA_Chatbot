@@ -8,7 +8,7 @@ const sheet = workbook.Sheets[sheetName];
 const excelData = xlsx.utils.sheet_to_json(sheet);
 
 
-const apiKey = ''; 
+const apiKey = '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'; 
 
 const dataString = JSON.stringify(excelData);
 
