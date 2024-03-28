@@ -26,7 +26,7 @@ function isDatabaseQuestion(question) {
 async function handleGeneralQuestion(req, res, userQuestion) {
     try {
         const openaiResponse = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
+            // 'https://api.openai.com/v1/chat/completions',
             {
                 model: 'gpt-3.5-turbo',
                 messages: [
@@ -66,7 +66,7 @@ async function handleDatabaseQuestion(req, res, userQuestion) {
         let systemMessage = "We have two tables for spa services. The 'spa_data' table includes everyday services with columns: Date, Service, Price, Duration, ClientName, and Therapist. The 'spa_services_data_premium' table includes premium services with the same columns. Please provide a SQL query based on the information provided.";
 
         const queryResponse = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
+            // 'https://api.openai.com/v1/chat/completions',
             {
                 model: "gpt-3.5-turbo",
                 messages: [{

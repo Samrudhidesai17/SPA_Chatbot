@@ -42,7 +42,7 @@ rl.question('Choose a tag (by number or name): ', (tagInput) => {
                 content: `Here is some data from the Excel file:\n${dataString}\n${userQuestion}`
             }];
 
-            axios.post('https://api.openai.com/v1/chat/completions', {
+            // axios.post('https://api.openai.com/v1/chat/completions', {
                 model: "gpt-3.5-turbo-0613",
                 messages: messages,
                 max_tokens: 100
