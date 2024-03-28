@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>CHATBOT-FOR-DATABASE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .chat-container {
+            width: 350px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 50px auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .chat-body {
+            padding: 20px;
+            height: 300px;
+            overflow-y: auto;
+            background-color: #e5e5e5;
+            border-bottom: 2px solid black;
+        }
+        .chat-input-area {
+    padding: 10px;
+    background-color: #f4f4f4;
+    display: flex; /* This will create a flex container */
+    align-items: center; /* This will align children vertically in the center */
+    gap: 2Spx; /* This will create a gap between each child */
+}
+
+/* Style for select and input, assuming they should expand to fill space */
+.chat-input-area select,
+.chat-input-area input {
+    flex: 1; /* This will allow them to grow and fill the space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the send button */
+.chat-input-area button {
+    padding: 5px 10px; /* Smaller padding */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust if necessary */
+    line-height: 1; /* Line height for centering text */
+    display: flex; /* Use flex to center content */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+}
+
+/* Optional: If you want the button to be only as wide as its content */
+.chat-input-area button {
+    width: auto; /* Button width only as wide as its content */
+    min-width: 30px; /* Minimum width to ensure visibility */
+}
+
+        .chat-message {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #007bff;
+        }
+        .quick-reply-area {
+            padding: 10px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .quick-reply {
+            background-color: #e7e7e7;
+            border: none;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .quick-reply:hover {
+            background-color: #d7d7d7;
+        }
+        table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+       
+  
+  
+  
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">SPA-BOT</div>
+        <div class="chat-body" id="chat-messages">
+            <!-- Results will be displayed here -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="question" placeholder="Type your question here...">
+            <button onclick="sendQuestion()">Send</button>
+        </div>
+        
+        <div class="quick-reply-area">
+            <!-- Quick replies can be dynamically populated or hard-coded -->
+            <div class="quick-reply" onclick="quickReply('Date')">Date</div>
+            <div class="quick-reply" onclick="quickReply('Service')">Service</div>
+            <div class="quick-reply" onclick="quickReply('Price')">Price</div>
+            <div class="quick-reply" onclick="quickReply('Duration')">Duration</div>
+            <div class="quick-reply" onclick="quickReply('ClientName')">ClientName</div>
+            <div class="quick-reply" onclick="quickReply('Therapist')">Therapist</div>
+            <form id="booking-form">
+                <input type="text" id="service-id" placeholder="Service ID">
+                <input type="date" id="booking-date">
+                <input type="time" id="booking-time">
+                <input type="text" id="client-name" placeholder="Your Name">
+                <button type="button" onclick="makeMockBooking()">Make Booking</button>
+            </form>
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+          function displayChatbotMessage(message) {
+    const chatMessages = document.getElementById('chat-messages');
+    if (chatMessages) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('chat-message');
+
+        let parsedMessage;
+        try {
+            parsedMessage = JSON.parse(message);
+        } catch (e) {
+            parsedMessage = message;
+        }
+
+        // Check if the message is an array of objects and format it as a table
+        if (Array.isArray(parsedMessage) && parsedMessage.length > 0 && typeof parsedMessage[0] === 'object') {
+            let table = '<table>';
+            // Add table headers
+            table += '<tr>';
+            Object.keys(parsedMessage[0]).forEach(key => {
+                table += `<th>${key}</th>`;
+            });
+            table += '</tr>';
+            
+            // Add table rows
+            parsedMessage.forEach(item => {
+                table += '<tr>';
+                Object.values(item).forEach(value => {
+                    table += `<td>${value}</td>`;
+                });
+                table += '</tr>';
+            });
+            table += '</table>';
+            
+            messageDiv.innerHTML = table; // Use innerHTML to render the table
+        } else {
+            messageDiv.textContent = parsedMessage;
+        }
+
+        chatMessages.appendChild(messageDiv);
+    } else {
+        console.error('Chat messages container not found');
+    }
+}
+
+        function sendQuestion() {
+            const userQuestion = document.getElementById('question').value;
+            askQuestion(userQuestion);
+        }
+
+        async function askQuestion(question) {
+            // Clear previous messages
+            const chatMessages = document.getElementById('chat-messages');
+            chatMessages.innerHTML = '';
+
+            try {
+                const response = await fetch('http://localhost:3001/ask-question', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userQuestion: question })
+                });
+
+                const data = await response.json();
+                displayChatbotMessage(data.answer || JSON.stringify(data.queryResult));
+            } catch (error) {
+                console.error('Error:', error);
+                displayChatbotMessage('Chatbot: An error occurred.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            displayChatbotMessage('Hi, I am Spa-bot, your very own personal assistant. How can I help you today?');
+        });
+
+
+        function makeMockBooking() {
+    const serviceId = document.getElementById('service-id').value;
+    const date = document.getElementById('booking-date').value;
+    const time = document.getElementById('booking-time').value;
+    const clientName = document.getElementById('client-name').value;
+
+    fetch('http://localhost:3001/make-mock-booking', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ serviceId, date, time, clientName })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            displayChatbotMessage(`Booking confirmed! Your booking ID is: ${data.bookingId}`);
+        } else {
+            displayChatbotMessage('Sorry, we could not process your booking at this time.');
+        }
+    })
+    .catch(error => {
+        console.error('Error during mock booking:', error);
+        displayChatbotMessage('An error occurred during booking. Please try again later.');
+    });
+}
+
+
+        
+function quickReply(tag) {
+    console.log("Selected tag:", tag); // Debugging: Log the selected tag
+
+    let query = `SELECT ${tag} FROM spa_data UNION SELECT ${tag} FROM spa_services_data_premium;`;
+    console.log("Constructed SQL query:", query); // Debugging: Log the constructed SQL query
+
+    document.getElementById('question').value = `The list of ${tag} is:`; // Update this line
+    askQuestion(query);
+}
+
+    </script>
+</body>
+</html>  

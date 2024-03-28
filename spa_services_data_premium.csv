@@ -1,0 +1,101 @@
+Date,Service,Price,Duration,ClientName,Therapist
+2023-06-14 05:44:26+00:00,Elite Manicure,160,90,VIP Michael Johnson,Elite Therapist A
+2023-09-13 19:49:52+00:00,Premium Facial,307,90,VIP Emma Jones,Elite Therapist A
+2023-07-19 07:06:17+00:00,Exclusive Massage,181,150,VIP Emma Jones,Elite Therapist D
+2023-08-09 06:54:27+00:00,Exclusive Massage,183,150,VIP Michael Johnson,Elite Therapist C
+2023-03-08 08:20:45+00:00,Elite Manicure,261,120,VIP Sarah Wilson,Elite Therapist C
+2023-07-06 14:55:08+00:00,Exclusive Massage,173,90,VIP Emma Jones,Elite Therapist E
+2023-09-25 12:25:08+00:00,Exclusive Massage,409,150,VIP John Doe,Elite Therapist A
+2023-06-19 21:50:06+00:00,Exclusive Massage,150,120,VIP Susan Smith,Elite Therapist E
+2023-06-23 13:50:25+00:00,Luxury Pedicure,285,90,VIP Emma Jones,Elite Therapist A
+2023-09-16 02:59:40+00:00,Luxury Pedicure,342,120,VIP Emma Jones,Elite Therapist B
+2023-07-10 01:13:17+00:00,Exclusive Massage,353,60,VIP David Brown,Elite Therapist C
+2023-06-21 00:09:56+00:00,Signature Aromatherapy,463,120,VIP Michael Johnson,Elite Therapist D
+2023-06-18 13:23:31+00:00,VIP Body Wrap,416,90,VIP David Brown,Elite Therapist D
+2023-12-22 05:37:01+00:00,Signature Aromatherapy,290,90,VIP Emma Jones,Elite Therapist C
+2023-04-26 10:35:58+00:00,Signature Aromatherapy,402,90,VIP Susan Smith,Elite Therapist C
+2023-10-13 09:16:49+00:00,VIP Body Wrap,348,150,VIP Sarah Wilson,Elite Therapist B
+2023-08-11 16:14:41+00:00,Premium Facial,167,90,VIP Michael Johnson,Elite Therapist A
+2023-06-28 03:06:46+00:00,Luxury Pedicure,421,90,VIP Michael Johnson,Elite Therapist E
+2023-04-15 14:30:31+00:00,VIP Body Wrap,487,120,VIP Susan Smith,Elite Therapist C
+2023-08-19 00:36:41+00:00,Signature Aromatherapy,237,90,VIP Sarah Wilson,Elite Therapist B
+2023-05-28 18:12:42+00:00,VIP Body Wrap,499,60,VIP John Doe,Elite Therapist E
+2023-11-16 13:37:07+00:00,Luxury Pedicure,364,90,VIP Sarah Wilson,Elite Therapist A
+2023-04-20 01:19:37+00:00,VIP Body Wrap,312,90,VIP Michael Johnson,Elite Therapist C
+2023-10-27 00:07:57+00:00,Exclusive Massage,448,60,VIP Sarah Wilson,Elite Therapist C
+2023-07-23 05:29:49+00:00,Premium Facial,262,120,VIP Sarah Wilson,Elite Therapist D
+2023-03-18 05:12:50+00:00,Luxury Pedicure,464,120,VIP Susan Smith,Elite Therapist E
+2023-11-23 02:40:16+00:00,Premium Facial,464,150,VIP Sarah Wilson,Elite Therapist E
+2023-10-17 02:28:16+00:00,Signature Aromatherapy,348,120,VIP David Brown,Elite Therapist C
+2023-11-09 00:34:56+00:00,Luxury Pedicure,232,90,VIP Michael Johnson,Elite Therapist D
+2023-11-16 08:36:03+00:00,Signature Aromatherapy,449,120,VIP David Brown,Elite Therapist E
+2023-10-25 18:21:16+00:00,Exclusive Massage,152,90,VIP Sarah Wilson,Elite Therapist B
+2023-07-07 06:35:57+00:00,Signature Aromatherapy,175,60,VIP Susan Smith,Elite Therapist D
+2023-06-16 08:49:56+00:00,Exclusive Massage,392,120,VIP Sarah Wilson,Elite Therapist D
+2023-07-14 10:46:14+00:00,Exclusive Massage,447,120,VIP John Doe,Elite Therapist D
+2023-06-11 00:37:47+00:00,Premium Facial,448,120,VIP Susan Smith,Elite Therapist C
+2023-05-22 02:19:09+00:00,Elite Manicure,398,60,VIP John Doe,Elite Therapist C
+2023-04-22 09:48:28+00:00,Luxury Pedicure,252,60,VIP Michael Johnson,Elite Therapist B
+2023-06-04 17:46:13+00:00,VIP Body Wrap,354,60,VIP Michael Johnson,Elite Therapist A
+2023-07-09 14:19:37+00:00,Exclusive Massage,304,60,VIP Susan Smith,Elite Therapist D
+2023-10-22 01:52:31+00:00,Exclusive Massage,438,150,VIP Emma Jones,Elite Therapist E
+2023-11-12 10:32:34+00:00,Premium Facial,336,120,VIP David Brown,Elite Therapist A
+2023-02-10 08:12:31+00:00,VIP Body Wrap,222,120,VIP Michael Johnson,Elite Therapist E
+2023-07-06 14:50:52+00:00,Exclusive Massage,350,90,VIP John Doe,Elite Therapist B
+2023-05-17 08:22:57+00:00,Premium Facial,434,150,VIP Michael Johnson,Elite Therapist E
+2023-12-26 00:31:39+00:00,Premium Facial,205,150,VIP Emma Jones,Elite Therapist B
+2023-07-22 09:14:04+00:00,Exclusive Massage,289,90,VIP David Brown,Elite Therapist E
+2023-08-08 16:46:52+00:00,Signature Aromatherapy,391,120,VIP Michael Johnson,Elite Therapist D
+2023-11-25 20:23:42+00:00,Signature Aromatherapy,281,60,VIP Susan Smith,Elite Therapist E
+2023-01-25 12:06:23+00:00,Elite Manicure,305,90,VIP David Brown,Elite Therapist E
+2023-12-15 09:37:12+00:00,Elite Manicure,155,120,VIP Michael Johnson,Elite Therapist B
+2023-02-16 16:42:36+00:00,VIP Body Wrap,209,90,VIP John Doe,Elite Therapist A
+2023-12-29 23:34:21+00:00,Premium Facial,271,150,VIP Emma Jones,Elite Therapist E
+2023-08-07 01:51:54+00:00,VIP Body Wrap,151,150,VIP Michael Johnson,Elite Therapist B
+2023-09-02 05:13:07+00:00,Premium Facial,156,90,VIP Sarah Wilson,Elite Therapist B
+2023-04-09 09:25:32+00:00,Elite Manicure,226,90,VIP Emma Jones,Elite Therapist C
+2023-12-24 21:18:35+00:00,Premium Facial,415,150,VIP Michael Johnson,Elite Therapist B
+2023-01-09 12:32:23+00:00,Premium Facial,287,150,VIP Sarah Wilson,Elite Therapist D
+2023-01-01 13:41:37+00:00,Exclusive Massage,268,90,VIP David Brown,Elite Therapist E
+2023-10-26 14:44:34+00:00,Exclusive Massage,177,150,VIP Emma Jones,Elite Therapist E
+2023-03-08 09:33:43+00:00,Elite Manicure,209,150,VIP Emma Jones,Elite Therapist C
+2023-12-08 11:58:13+00:00,Luxury Pedicure,165,120,VIP David Brown,Elite Therapist A
+2023-12-18 18:34:22+00:00,Luxury Pedicure,246,90,VIP John Doe,Elite Therapist D
+2023-05-15 15:12:49+00:00,Signature Aromatherapy,448,150,VIP Emma Jones,Elite Therapist A
+2023-01-28 07:39:11+00:00,Premium Facial,245,120,VIP Emma Jones,Elite Therapist A
+2023-05-10 07:32:50+00:00,VIP Body Wrap,242,120,VIP Michael Johnson,Elite Therapist A
+2023-04-01 12:59:46+00:00,Luxury Pedicure,431,90,VIP Sarah Wilson,Elite Therapist D
+2023-03-09 03:03:32+00:00,VIP Body Wrap,335,60,VIP Michael Johnson,Elite Therapist B
+2023-10-28 04:58:53+00:00,Elite Manicure,447,60,VIP Michael Johnson,Elite Therapist E
+2023-12-20 06:35:35+00:00,Luxury Pedicure,187,60,VIP John Doe,Elite Therapist D
+2023-06-12 23:15:48+00:00,Elite Manicure,321,120,VIP Susan Smith,Elite Therapist B
+2023-08-25 22:01:35+00:00,Elite Manicure,496,120,VIP John Doe,Elite Therapist E
+2023-07-26 21:15:10+00:00,Premium Facial,352,150,VIP Sarah Wilson,Elite Therapist E
+2023-12-14 11:50:54+00:00,Elite Manicure,380,150,VIP Emma Jones,Elite Therapist B
+2023-03-23 12:56:06+00:00,Luxury Pedicure,158,60,VIP John Doe,Elite Therapist E
+2023-05-05 05:00:00+00:00,VIP Body Wrap,418,150,VIP Sarah Wilson,Elite Therapist A
+2023-12-22 04:27:13+00:00,Signature Aromatherapy,286,150,VIP John Doe,Elite Therapist D
+2023-04-13 22:20:14+00:00,VIP Body Wrap,497,60,VIP John Doe,Elite Therapist A
+2023-02-14 04:29:11+00:00,Elite Manicure,241,120,VIP John Doe,Elite Therapist A
+2023-03-30 08:12:31+00:00,Premium Facial,475,60,VIP Susan Smith,Elite Therapist A
+2023-04-11 07:18:17+00:00,VIP Body Wrap,153,150,VIP John Doe,Elite Therapist D
+2023-05-30 03:26:44+00:00,Elite Manicure,468,120,VIP Sarah Wilson,Elite Therapist A
+2023-03-03 05:48:24+00:00,VIP Body Wrap,184,120,VIP Emma Jones,Elite Therapist A
+2023-08-03 05:59:44+00:00,Exclusive Massage,175,90,VIP Michael Johnson,Elite Therapist A
+2023-08-24 07:01:09+00:00,Exclusive Massage,308,60,VIP Susan Smith,Elite Therapist A
+2023-04-13 22:26:56+00:00,Premium Facial,248,60,VIP Susan Smith,Elite Therapist C
+2023-05-13 02:11:48+00:00,VIP Body Wrap,277,60,VIP John Doe,Elite Therapist B
+2023-01-14 00:06:38+00:00,VIP Body Wrap,204,150,VIP David Brown,Elite Therapist E
+2023-05-20 19:39:27+00:00,Exclusive Massage,299,120,VIP Susan Smith,Elite Therapist D
+2023-11-14 19:36:15+00:00,Signature Aromatherapy,484,150,VIP Emma Jones,Elite Therapist E
+2023-11-06 12:39:29+00:00,Premium Facial,449,120,VIP Sarah Wilson,Elite Therapist D
+2023-12-14 09:51:28+00:00,Luxury Pedicure,387,120,VIP John Doe,Elite Therapist C
+2023-04-21 17:43:38+00:00,Elite Manicure,365,120,VIP Sarah Wilson,Elite Therapist A
+2023-03-21 05:21:05+00:00,VIP Body Wrap,169,120,VIP John Doe,Elite Therapist C
+2023-09-10 08:43:11+00:00,Exclusive Massage,440,60,VIP Michael Johnson,Elite Therapist C
+2023-03-21 08:47:56+00:00,Signature Aromatherapy,219,90,VIP Sarah Wilson,Elite Therapist C
+2023-04-18 12:46:53+00:00,Elite Manicure,234,150,VIP Sarah Wilson,Elite Therapist A
+2023-02-20 08:04:11+00:00,Elite Manicure,280,60,VIP Emma Jones,Elite Therapist C
+2023-01-18 03:25:12+00:00,VIP Body Wrap,305,90,VIP David Brown,Elite Therapist A
+2023-06-07 00:43:49+00:00,Signature Aromatherapy,419,90,VIP Susan Smith,Elite Therapist D
+2023-03-29 00:15:39+00:00,VIP Body Wrap,162,60,VIP David Brown,Elite Therapist A
